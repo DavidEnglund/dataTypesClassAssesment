@@ -1,0 +1,221 @@
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.csprojResolveAssemblyReference.cache
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.pdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.apk
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid-Signed.apk
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\FormsViewGroup.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.pdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.xml
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.pdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\bin\BinaryTree.Droid.apk
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable\icon.png
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-hdpi\icon.png
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\R.cs.flag
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\uploadflags.txt
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Java.Interop.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Mono.Android.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\mscorlib.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Core.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Net.Http.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.Droid.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+c:\users\david\documents\visual studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\david\Documents\Visual Studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.pdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.apk
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid-Signed.apk
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\FormsViewGroup.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.pdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.xml
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.csprojResolveAssemblyReference.cache
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.pdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\bin\BinaryTree.Droid.apk
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable\icon.png
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-hdpi\icon.png
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\R.cs.flag
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\uploadflags.txt
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Java.Interop.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Mono.Android.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\mscorlib.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Core.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Net.Http.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.Droid.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+K:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.pdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.apk
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid-Signed.apk
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\FormsViewGroup.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.pdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.xml
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.csprojResolveAssemblyReference.cache
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.pdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\bin\BinaryTree.Droid.apk
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable\icon.png
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-hdpi\icon.png
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\R.cs.flag
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\uploadflags.txt
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Java.Interop.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Mono.Android.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\mscorlib.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Core.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Net.Http.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.Droid.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+E:\xamarin\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.pdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.apk
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid-Signed.apk
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\FormsViewGroup.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.pdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Core.xml
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.csprojResolveAssemblyReference.cache
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.pdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\bin\BinaryTree.Droid.apk
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable\icon.png
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-hdpi\icon.png
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\R.cs.flag
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\uploadflags.txt
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Java.Interop.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\Mono.Android.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\mscorlib.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Core.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Net.Http.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\BinaryTree.Droid.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\obj\Debug\BinaryTree.Droid.dll.mdb
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree.Droid\bin\Debug\BinaryTree.Droid.dll.mdb

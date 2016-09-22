@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- I Have done this with stack layout but a grid may have been better with hindsight
+      I'll try using a grid for the hashing, sorting, and searching
+       also I know that its a little crowded but its just to display that
+       I can make these data structures so who cares -->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BinaryTree.Page1" BackgroundColor="#4422aa" Padding="1">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Button">
+        <Setter Property="FontSize" Value="14" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout x:Name="listView"  VerticalOptions="StartAndExpand" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+    
+    <Label x:Name="lblTilte" HorizontalTextAlignment="Center" Text="Binary Tree and Dbl Link List" FontSize="24" />
+    <StackLayout Orientation="Horizontal">
+      <StackLayout Orientation="Vertical" WidthRequest="60">
+        <Label x:Name="lblKey"  Text="Key"/>
+        <Entry x:Name="txtKey"  Text="0" Keyboard="Numeric" HorizontalOptions="FillAndExpand" />
+      </StackLayout>
+      <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Label x:Name="lblData" Text="Data"/>
+        <Entry x:Name="txtData" Text="" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+      </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="1">
+      <Button x:Name="btnFind" Text="Find Key" Clicked="findKey_click" HorizontalOptions="StartAndExpand"/>
+      <Button x:Name="btnAdd" Text="Add Key" Clicked="addKey_click" HorizontalOptions="CenterAndExpand" />
+      <Button x:Name="btnDelete" Text="Delete Key" Clicked="btnDelete_click" HorizontalOptions="CenterAndExpand" />
+      <Button x:Name="btnSave" Text="Save Key" Clicked="btnSave_click" HorizontalOptions="EndAndExpand"  />
+    </StackLayout>
+    <Label Text="get binary tree iterations" />
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnLeft" Text="Left" Clicked="btnLeft_click" HorizontalOptions="StartAndExpand" />
+      <Button x:Name="btnStraight" Text="Straight" Clicked="btnStraight_click" HorizontalOptions="CenterAndExpand" />
+      <Button x:Name="btnRight" Text="Right" Clicked="btnRight_click" HorizontalOptions="EndAndExpand" />
+   </StackLayout>
+    <Label x:Name="lblIteration" Text="Straight Iteration" />
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnLinkLeft" Text="Prev" Clicked="btnLinkLeft_click" HorizontalOptions="Start" />
+      <Label x:Name="lblLink" Text="thing" HorizontalOptions="CenterAndExpand"/>
+      <Button x:Name="btnLinkRight" Text="Next" HorizontalOptions="End" Clicked="btnLinkRight_click" />
+    </StackLayout>
+    <Label x:Name="lblSaveTitle" Text="Saved nodes" />
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnSaveLeft" Text="Prev" Clicked="btnSaveLeft_click" HorizontalOptions="Start" />
+      <Label x:Name="lblSaveList" Text="thing" HorizontalOptions="CenterAndExpand"/>
+      <Button x:Name="btnSaveRight" Text="Next" HorizontalOptions="End" Clicked="btnSaveRight_click" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnFindSaved" Text="Find saved" Clicked="btnFindSaved_click" />
+      <Button x:Name="btnRemoveSaved" Text="Remove Saved" Clicked="btnRemoveSaved_click" />
+      <Button x:Name="btnReplaceSaved" Text="Relace Current"  Clicked="btnReplacedSaved_click" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnGoToHash" Text="Hash Tables >>" Clicked="btnGoToHash_click" />
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>

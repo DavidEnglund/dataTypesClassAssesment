@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BinaryTree.HashTableView" BackgroundColor="#aa2244">
+  <StackLayout>
+    <Label x:Name="lblTilte" HorizontalTextAlignment="Center" Text="Hash Tables" FontSize="28" />
+    <Grid HorizontalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />    
+        <RowDefinition Height="auto" /> 
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" /> 
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Label x:Name="lblKey" Text="Key" Grid.Row="0" Grid.Column="0" />
+      <Label x:Name="lblData" Text="Data" Grid.Row="0" Grid.Column="1" />
+      
+      <Entry x:Name="entKey" Grid.Row="1" Grid.Column="0" />
+      <Entry x:Name="entData" Grid.Row="1" Grid.Column="1" /> 
+           
+      <Button x:Name="btnAdd" Grid.Row="2" Grid.Column="0" Text="Add Key" Clicked="btnAdd_click" />
+      <Button x:Name="btnRefresh" Grid.Row="2" Grid.Column="1" Text="Refresh Lists" Clicked="btnRefresh_click" />
+      
+      <Label x:Name="lblKeyList" Text="" Grid.Row="3" Grid.Column="0" />
+      <Label x:Name="lblDataList" Text="" Grid.Row="3" Grid.Column="1" />
+      
+      <Label x:Name="lblHashList" Text="" Grid.Row="4" Grid.Column="0" />
+      <Label x:Name="lblRetrivedList" Text="" Grid.Row="4" Grid.Column="1" />
+    </Grid>
+  </StackLayout>
+</ContentPage>

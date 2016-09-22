@@ -1,0 +1,2 @@
+C:\Users\david\Documents\Visual Studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree.Windows\BinaryTree.Windows.csproj;neutral
+C:\Users\david\Documents\Visual Studio 2015\Projects\BinaryTree\BinaryTree\BinaryTree\BinaryTree.csproj;neutral
