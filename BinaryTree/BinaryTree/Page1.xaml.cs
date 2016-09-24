@@ -226,5 +226,10 @@ namespace BinaryTree
         {
              Navigation.PushAsync(new HashTableView());
         }
+        // the got to the sorting an searching button
+        public void btnGoToSort_click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SearchAndSort());
+        }
     }
 }

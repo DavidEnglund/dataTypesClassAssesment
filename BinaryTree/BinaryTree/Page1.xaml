@@ -58,6 +58,7 @@
     </StackLayout>
     <StackLayout Orientation="Horizontal">
       <Button x:Name="btnGoToHash" Text="Hash Tables >>" Clicked="btnGoToHash_click" />
+      <Button x:Name="btnGoToSort" Text="Sort and search >>" Clicked="btnGoToSort_click" />
     </StackLayout>
   </StackLayout>
 

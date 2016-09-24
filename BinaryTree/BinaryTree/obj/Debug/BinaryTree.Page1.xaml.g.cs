@@ -92,6 +92,9 @@ namespace BinaryTree {
         private global::Xamarin.Forms.Button btnGoToHash;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnGoToSort;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Page1));
             listView = this.FindByName<global::Xamarin.Forms.StackLayout>("listView");
@@ -119,6 +122,7 @@ namespace BinaryTree {
             btnRemoveSaved = this.FindByName<global::Xamarin.Forms.Button>("btnRemoveSaved");
             btnReplaceSaved = this.FindByName<global::Xamarin.Forms.Button>("btnReplaceSaved");
             btnGoToHash = this.FindByName<global::Xamarin.Forms.Button>("btnGoToHash");
+            btnGoToSort = this.FindByName<global::Xamarin.Forms.Button>("btnGoToSort");
         }
     }
 }

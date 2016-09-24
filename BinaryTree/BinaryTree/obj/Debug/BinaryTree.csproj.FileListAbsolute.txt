@@ -51,5 +51,6 @@ F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\bin\Debug\Xamarin.Forms.Platform.dll
 F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\bin\Debug\Xamarin.Forms.Xaml.dll
 F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\bin\Debug\Xamarin.Forms.Core.xml
 F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\bin\Debug\Xamarin.Forms.Xaml.xml
+F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\obj\Debug\BinaryTree.SearchAndSort.xaml.g.cs
 F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\obj\Debug\BinaryTree.dll.mdb
 F:\APP DEV\BinaryTree\BinaryTree\BinaryTree\bin\Debug\BinaryTree.dll.mdb
