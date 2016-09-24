@@ -26,10 +26,22 @@ namespace BinaryTree
 
             // now lets shuffle and display the shuffled array
             myNumbers.Shuffle();
+            // a new exact copy to perfrom a stright bubble on
+            ShuffleSorter bubNumber = new ShuffleSorter(myNumbers.GetArray());
             foreach (int number in myNumbers.GetArray())
             {
                 lblShuffledList.Text += number + " , ";
             }
+
+
+            // ok so a test of the guidepost sort - I dont think on its own it will work but it should drasitcly cut down a followed bubble sort
+            myNumbers.GuidepostSort();
+            lblNumberList.Text = "";
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblNumberList.Text += number + " , ";
+            }
+            bubNumber.BubbleSort();
 
         }
 
