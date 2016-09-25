@@ -45,6 +45,10 @@ namespace BinaryTree
         {
             return numbers;
         }
+        public int GetCentre()
+        {
+            return numbers.Length / 2;
+        }
         /// <summary>
         /// creates an ineger array with random escalting(going up) values using a method to prefer mid range numbers
         /// </summary>
@@ -194,7 +198,7 @@ namespace BinaryTree
                         {
                             swap(i, i + 1);
                             movement = true;
-                            Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
+                           // Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
                             comparisonsBubble++;
 
                         }
@@ -219,6 +223,228 @@ namespace BinaryTree
                 }
             }
             Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
+        }
+
+        // ======================== tests ===========================
+        public void OutsideIn()
+        {
+            // for this I am going to not do a bubble as this is testing the variances of the post sort
+            // and I am gonig to kill the debug for every line as I just want the final tally
+            // unless there is a problem
+            Debug.WriteLine("Outside in sort");
+            int guide = numbers.Length / 2;
+            bool movement = true;
+            int passes = 0;
+            int comparisonsPost = 0;
+            int comparisonsBubble = 0;
+
+            while (movement)
+            {
+                movement = false;
+                passes++;
+                Debug.WriteLine("---=== pass " + passes + " ===---");
+                for (int i = 0; i < guide; i++)
+                {
+                    // and now for the bubble
+                    #region bubble in guidepost
+                    #endregion
+                    // first the lower half
+                    if (numbers[i] > numbers[guide])
+                    {
+                      //  Debug.WriteLine(numbers[i] + "<<<<<" + numbers[guide] + " --- " + i);
+                        swap(i, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                    // then the higher
+                    if (numbers[numbers.Length - i-1] < numbers[guide])
+                    {
+                       // Debug.WriteLine(numbers[numbers.Length - i] + ">>>>" + numbers[guide] + " --- " + (numbers.Length - i));
+                        swap(numbers.Length - i-1, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                }
+            }
+
+            Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
+            Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
+            Debug.WriteLine("---=== Totl:  " + (comparisonsPost + comparisonsBubble) + " ===---");
+        }
+
+        // ======================== tests ===========================
+        public void StartToEnd()
+        {
+            // for this I am going to not do a bubble as this is testing the variances of the post sort
+            // and I am gonig to kill the debug for every line as I just want the final tally
+            // unless there is a problem
+            Debug.WriteLine("Start to end sort");
+            int guide = numbers.Length / 2;
+            bool movement = true;
+            int passes = 0;
+            int comparisonsPost = 0;
+            int comparisonsBubble = 0;
+
+            while (movement)
+            {
+                movement = false;
+                passes++;
+                Debug.WriteLine("---=== pass " + passes + " ===---");
+                for (int i = 0; i < guide; i++)
+                {
+                    // and now for the bubble
+                    #region bubble in guidepost
+                    /**/
+                    #endregion
+                    // first the lower half
+                    if (numbers[i] > numbers[guide])
+                    {
+                        //  Debug.WriteLine(numbers[i] + "<<<<<" + numbers[guide] + " --- " + i);
+                        swap(i, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                    // then the higher
+                    if (numbers[i + guide] < numbers[guide])
+                    {
+                        //Debug.WriteLine(numbers[i + guide] + ">>>>" + numbers[guide] + " --- " + (i + guide));
+                        swap(i + guide, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                }
+            }
+
+            Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
+            Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
+            Debug.WriteLine("---=== Totl:  " + (comparisonsPost + comparisonsBubble) + " ===---");
+        }
+
+        // ======================== tests ===========================
+        public void InsideOut()
+        {
+            // for this I am going to not do a bubble as this is testing the variances of the post sort
+            // and I am gonig to kill the debug for every line as I just want the final tally
+            // unless there is a problem
+            Debug.WriteLine("Inside out sort");
+            int guide = numbers.Length / 2;
+            bool movement = true;
+            int passes = 0;
+            int comparisonsPost = 0;
+            int comparisonsBubble = 0;
+
+            while (movement)
+            {
+                movement = false;
+                passes++;
+                Debug.WriteLine("---=== pass " + passes + " ===---");
+                for (int i = 0; i < guide; i++)
+                {
+                    // and now for the bubble
+                    #region bubble in guidepost
+                    /**/
+                    #endregion
+                    // first the lower half
+                    if (numbers[guide-i] > numbers[guide])
+                    {
+                        //  Debug.WriteLine(numbers[i] + "<<<<<" + numbers[guide] + " --- " + i);
+                        swap(guide - i, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                    // then the higher
+                    if (numbers[i + guide] < numbers[guide])
+                    {
+                        //Debug.WriteLine(numbers[i + guide] + ">>>>" + numbers[guide] + " --- " + (i + guide));
+                        swap(i + guide, guide);
+                        movement = true;
+                        comparisonsPost++;
+                    }
+                }
+            }
+
+            Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
+            Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
+            Debug.WriteLine("---=== Totl:  " + (comparisonsPost + comparisonsBubble) + " ===---");
+        }
+
+        // here I am gonig to try and do it just with the goudepost
+        public void GuideOnly()
+        {
+            int divider = 2; // this will divide by 2 then 4 the n8 etc untill the sum is three or less
+            int fraction = numbers.Length / divider; // this is the length of a fraction of the array length
+            int[] currentPosts = new int[] { numbers.Length/divider }; // this is all the guideposts that we will loop though
+            int offset = currentPosts[0]; // this is how far from the post to check from - I am doing it this way becasue rounding wont get everything and ciling causes out of bounds errors
+            int[] newPosts = new int[divider / 2]; // this is all the guideposts that we will loop though
+            bool swapMade = true;
+            int passes = 0;  // the pass count
+            int comparisonsPost = 0; // the number of swaps made
+
+            // now to go though untill the fraction is less than three
+            while (fraction >= 2)
+            {
+                swapMade = true; 
+              //  Debug.WriteLine("---=== frac: " + fraction + " ===---");
+                // the main event so to speak
+                while (swapMade)
+                {
+                    Debug.WriteLine("---=== pass: " + passes + " ===---");
+                    passes++;
+                    swapMade = false;
+                    // looping though each guidepost we currentley have
+                    foreach (int guidepost in currentPosts)
+                    {
+                      //  Debug.WriteLine("---=== guid: " + guidepost + " ===---");
+                        for (int i = 0; i < fraction; i++)
+                        {
+                            int lowside = (guidepost - offset) + i;
+                            int highside = guidepost + i;
+
+                            // check the lowside then the highside of the guide
+                            if (lowside >= 0)
+                            {
+                                if (numbers[lowside] > numbers[guidepost])
+                                {
+                                    swap(lowside, guidepost);
+                                    swapMade = true;
+                                    comparisonsPost++;
+                                 //   Debug.WriteLine(numbers[lowside] + "<<<<<" + numbers[guidepost] + " --- " + lowside);
+                                }
+                            }
+                            if (highside < numbers.Length)
+                            {
+                                if (numbers[highside] < numbers[guidepost])
+                                {
+                                    swap(highside, guidepost);
+                                    swapMade = true;
+                                    comparisonsPost++;
+                                    //Debug.WriteLine(numbers[highside] + ">>>>" + numbers[guidepost] + " --- " + highside);
+                                }
+                            }
+                        } // that each check done for that guide
+                    }// all of the guideposts have been checked
+                }// and now it has no more swaps to be made so all of the lower half is in there and vice versa for higher
+
+                // getting the next set of guideposts
+                newPosts = new int[divider];
+                divider = divider * 2;
+                fraction = (int)Math.Ceiling( (double)numbers.Length / divider);
+
+                int k = 0;// this is th count for the new posts array
+                for (int j = 0; j < currentPosts.Length; j++)
+                {
+                    newPosts[k] = currentPosts[j] - fraction;
+                    k++;
+                    newPosts[k] = currentPosts[j] + fraction;
+                    k++;
+                }
+                // now to set current to new
+                currentPosts = newPosts;
+                offset = currentPosts[0];
+                Debug.WriteLine(currentPosts[1] + "-----------");
+            }// ends when fraction is three or less
+            Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
+
         }
 
     }
