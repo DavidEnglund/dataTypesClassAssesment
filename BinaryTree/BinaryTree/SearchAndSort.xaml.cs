@@ -10,11 +10,13 @@ namespace BinaryTree
 {
     public partial class SearchAndSort : ContentPage
     {
+        ShuffleSorter myNumbers = new ShuffleSorter();
         public SearchAndSort()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             // create the array sorter 
-            ShuffleSorter myNumbers = new ShuffleSorter();
+            
 
             // lets run the arrary createor here
             myNumbers.CreateEscalating(12, 60);
@@ -25,33 +27,35 @@ namespace BinaryTree
             }
 
             // now lets shuffle and display the shuffled array
-            myNumbers.Shuffle();
+            //myNumbers.Shuffle(1);
             // a new exact copy to perfrom a stright bubble on
             ShuffleSorter bubNumber = new ShuffleSorter(myNumbers.GetArray());
+            /*
             foreach (int number in myNumbers.GetArray())
             {
                 lblShuffledList.Text += number + " , ";
             }
-
+            */
 
             // ok so a test of the guidepost sort - I dont think on its own it will work but it should drasitcly cut down a followed bubble sort
             //myNumbers.GuidepostSort();
             // ================== tests ===================
             // these will run and not display anything - I'll undo the commenting out of above after tests
-            myNumbers.GuidepostSort();
-            bubNumber.GuideOnly();
+            //myNumbers.BubbleSort();
+            //bubNumber.GuideOnly();
            // myNumbers.StartToEnd();
            // myNumbers.BubbleSort();
             
-            lblNumberList.Text = "start to end ";
+            lblNumberList.Text = "Original array: ";
+            int counter = 0;
             foreach (int number in myNumbers.GetArray())
             {
-                if(number == myNumbers.GetArray()[myNumbers.GetCentre()])
-                {
-                    lblNumberList.Text += "-->";
-                }
-                lblNumberList.Text += number + " , ";
+                lblNumberList.Text += "[" + counter + "]=";
+                lblNumberList.Text += number + "  , ";
+                counter++;
             }
+
+            /*
             lblShuffledList.Text = "outside in ";
             int counter = 0;
             foreach (int number in bubNumber.GetArray())
@@ -65,11 +69,34 @@ namespace BinaryTree
                 counter++;
             }
             // bubNumber.BubbleSort();
-
+            */
 
         }
 
-        // this function will create a random escalating array
-        
+        public void btnShuffle_click(object sender,EventArgs e)
+        {
+            myNumbers.Shuffle();
+            lblShuffledList.Text = "Shuffled: ";
+            int counter = 0;
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblShuffledList.Text += "[" + counter + "]=";
+                lblShuffledList.Text += number + " , ";
+                counter++;
+            }
+        }
+
+        public void btnSort_click(object sender, EventArgs e)
+        {
+            myNumbers.GuideOnly();
+            lblShuffledList.Text = "Sorted with binary pivot sort: ";
+            int counter = 0;
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblShuffledList.Text += "[" + counter + "]=";
+                lblShuffledList.Text += number + " , ";
+                counter++;
+            }
+        }
     }
 }

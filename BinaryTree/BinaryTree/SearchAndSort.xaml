@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BinaryTree.SearchAndSort">
   <StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Entry x:Name="entNumber" HorizontalOptions="FillAndExpand" Keyboard="Numeric" />
+      <Button x:Name="btnFind" Text="Find number" />
+      <Label x:Name="lblfound" HorizontalOptions="FillAndExpand" Text="Found at: " VerticalOptions="Center" FontSize="20" />    
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Button Text="Shuffle" x:Name="btnShuffle" Clicked="btnShuffle_click" />
+      <Button Text="Sort" x:Name="btnSort" Clicked="btnSort_click" />
+
+    </StackLayout>
     <Label x:Name="lblNumberList" />
   <Label x:Name="lblShuffledList" />
   </StackLayout>
