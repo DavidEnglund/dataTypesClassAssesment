@@ -29,6 +29,8 @@ namespace BinaryTree
     {
         // we will need an array of int to shuffle and sort and evreything else
         private int[] numbers;
+        // ad a bool to tell if its sorted or not
+        private bool sorted = false;
 
         public ShuffleSorter()
         {
@@ -39,6 +41,7 @@ namespace BinaryTree
             numbers = new int[givenNumbers.Length];
             //numbers = givenNumbers;
             givenNumbers.CopyTo(numbers, 0);
+            sorted = false;
         }
 
         public int[] GetArray()
@@ -66,6 +69,7 @@ namespace BinaryTree
                 escalating[i] = current;
             }
             numbers = escalating;
+            sorted = true;
         }
         // a private funtion to switch two numbers using their indexes 
         private void swap(int placeOne, int placeTwo)
@@ -73,6 +77,7 @@ namespace BinaryTree
             int holder = numbers[placeOne];
             numbers[placeOne] = numbers[placeTwo];
             numbers[placeTwo] = holder;
+            sorted = false;
         }
 
         /// <summary>
@@ -90,6 +95,7 @@ namespace BinaryTree
                 // then save the first place, set the 1st to the 2nd, then the 2nd to the saved 1st
                 swap(placeOne, placeTwo);
             }
+            sorted = false;
         }        
 
         // and a default that will do it by double what it has - not so good but so what?
@@ -170,6 +176,7 @@ namespace BinaryTree
             Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
             Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
             Debug.WriteLine("---=== Totl:  " + (comparisonsPost + comparisonsBubble) + " ===---");
+            sorted = true;
         }
 
         // and a bubble sort to compare
@@ -223,6 +230,7 @@ namespace BinaryTree
                 }
             }
             Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
+            sorted = true;
         }
 
         // ======================== tests ===========================
@@ -372,8 +380,8 @@ namespace BinaryTree
         public void GuideOnly()
         {
             int divider = 2; // this will divide by 2 then 4 the n8 etc untill the sum is three or less
-            int fraction = numbers.Length / divider; // this is the length of a fraction of the array length
-            int[] currentPosts = new int[] { numbers.Length/divider }; // this is all the guideposts that we will loop though
+            int fraction = (numbers.Length-1) / divider; // this is the length of a fraction of the array length
+            int[] currentPosts = new int[] { (numbers.Length-1)/divider }; // this is all the guideposts that we will loop though
             int offset = currentPosts[0]; // this is how far from the post to check from - I am doing it this way becasue rounding wont get everything and ciling causes out of bounds errors
             int[] newPosts = new int[divider / 2]; // this is all the guideposts that we will loop though
             bool swapMade = true;
@@ -381,10 +389,10 @@ namespace BinaryTree
             int comparisonsPost = 0; // the number of swaps made
 
             // now to go though untill the fraction is less than three
-            while (fraction >= 2)
+            while (fraction >= 1)
             {
                 swapMade = true; 
-              //  Debug.WriteLine("---=== frac: " + fraction + " ===---");
+                Debug.WriteLine("---=== frac: " + fraction + " ===---");
                 // the main event so to speak
                 while (swapMade)
                 {
@@ -394,10 +402,10 @@ namespace BinaryTree
                     // looping though each guidepost we currentley have
                     foreach (int guidepost in currentPosts)
                     {
-                      //  Debug.WriteLine("---=== guid: " + guidepost + " ===---");
+                        Debug.WriteLine("---=== guid: " + guidepost + " ===---");
                         for (int i = 0; i < fraction; i++)
                         {
-                            int lowside = (guidepost - offset) + i;
+                            int lowside = (guidepost - fraction);
                             int highside = guidepost + i;
 
                             // check the lowside then the highside of the guide
@@ -408,7 +416,7 @@ namespace BinaryTree
                                     swap(lowside, guidepost);
                                     swapMade = true;
                                     comparisonsPost++;
-                                 //   Debug.WriteLine(numbers[lowside] + "<<<<<" + numbers[guidepost] + " --- " + lowside);
+                                    Debug.WriteLine(numbers[lowside] + "<<<<<" + numbers[guidepost] + " --- " + lowside);
                                 }
                             }
                             if (highside < numbers.Length)
@@ -418,7 +426,7 @@ namespace BinaryTree
                                     swap(highside, guidepost);
                                     swapMade = true;
                                     comparisonsPost++;
-                                    //Debug.WriteLine(numbers[highside] + ">>>>" + numbers[guidepost] + " --- " + highside);
+                                    Debug.WriteLine(numbers[highside] + ">>>>" + numbers[guidepost] + " --- " + highside);
                                 }
                             }
                         } // that each check done for that guide
@@ -428,7 +436,7 @@ namespace BinaryTree
                 // getting the next set of guideposts
                 newPosts = new int[divider];
                 divider = divider * 2;
-                fraction = (int)Math.Ceiling( (double)numbers.Length / divider);
+                fraction = (int)Math.Ceiling( ((double)numbers.Length-1) / divider);
 
                 int k = 0;// this is th count for the new posts array
                 for (int j = 0; j < currentPosts.Length; j++)
@@ -440,12 +448,58 @@ namespace BinaryTree
                 }
                 // now to set current to new
                 currentPosts = newPosts;
+                if (currentPosts[0] <= 0) {
+                    currentPosts[0] = 0; }
                 offset = currentPosts[0];
+                
                 Debug.WriteLine(currentPosts[1] + "-----------");
             }// ends when fraction is three or less
             Debug.WriteLine("---=== Post: " + comparisonsPost + " ===---");
-
+            sorted = true;
         }
 
+
+        /// <summary>
+        /// does a binary search of the array looking for you chosen value. returns the array positions it's in.
+        /// -1 is not found.
+        /// -2 is not sorted.
+        /// </summary>
+        /// <param name="lookingFor"></param>
+        /// <returns></returns>
+        public int BinarySearch(int lookingFor)
+        {
+            if (sorted)
+            {
+                int low = 0;
+                int high = numbers.Length-1;
+                while (low <= high)
+                {
+                    int lookingAt = (low + high) / 2;
+                    if(numbers[lookingAt] == lookingFor)
+                    {
+                        return lookingAt;
+                    }
+                    else
+                    {
+                        if(numbers[lookingAt] > lookingFor)
+                        {
+                            high = lookingAt-1;
+                        }
+                        else
+                        {
+                            low = lookingAt+1;
+                        }
+                    }
+                    Debug.WriteLine("low: " + low + " mid: " + lookingAt + " high: " + high);
+                }   
+                // not found error
+                return -1;
+            }
+            else
+            {
+                // not sorted error
+                return -2;
+            }
+        }
     }
 }

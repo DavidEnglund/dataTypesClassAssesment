@@ -5,7 +5,7 @@
   <StackLayout>
     <StackLayout Orientation="Horizontal">
       <Entry x:Name="entNumber" HorizontalOptions="FillAndExpand" Keyboard="Numeric" />
-      <Button x:Name="btnFind" Text="Find number" />
+      <Button x:Name="btnFind" Text="Find number" Clicked="btnFind_click"/>
       <Label x:Name="lblfound" HorizontalOptions="FillAndExpand" Text="Found at: " VerticalOptions="Center" FontSize="20" />    
     </StackLayout>
     <StackLayout Orientation="Horizontal">

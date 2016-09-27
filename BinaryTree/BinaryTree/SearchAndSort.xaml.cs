@@ -19,7 +19,7 @@ namespace BinaryTree
             
 
             // lets run the arrary createor here
-            myNumbers.CreateEscalating(12, 60);
+            myNumbers.CreateEscalating(12, 92);
             // now lets list those number and see what we get
             foreach (int number in myNumbers.GetArray())
             {
@@ -70,6 +70,33 @@ namespace BinaryTree
             }
             // bubNumber.BubbleSort();
             */
+
+        }
+        public void btnFind_click(object sender, EventArgs e)
+        {
+            int lookFor;
+            int found = -3 ;
+            if (int.TryParse(entNumber.Text, out lookFor))
+            {
+                found = myNumbers.BinarySearch(lookFor);
+            }
+            else
+            {
+                DisplayAlert("bad input", "Please put a number in the search entry", "OK");
+            }
+            if(found == -1)
+            {
+                DisplayAlert("Search", "Not Found", "OK");
+            }
+            if (found == -2)
+            {
+                DisplayAlert("Search", "Please sort array first", "OK");
+            }
+            if (found>=0)
+            {
+                DisplayAlert("Search", "Found at: " + found, "OK");
+            }
+
 
         }
 
