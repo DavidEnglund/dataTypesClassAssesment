@@ -501,5 +501,96 @@ namespace BinaryTree
                 return -2;
             }
         }
+
+        // well the guide only failed so I am going to try copying the binary search technique and seeing if that even works
+        // works but is slow - will try something i think will work better
+        public void BinarySort()
+        {
+            bool swapped = true;
+            int swapcount = 0;
+            int current = 0;
+            while (swapped)
+            {
+                swapped = false;
+                for (current = 0; current < numbers.Length; current++)
+                {
+                    int low = 0;
+                    int high = numbers.Length - 1;
+                    while (low <= high)
+                    {
+                        int Pivot = (low + high) / 2;
+                        if (Pivot == current)
+                        {
+                            Debug.WriteLine(" well now what? " + Pivot + " : " + numbers[current]);
+                            break;
+                        }
+                        else
+                        {
+                            if (Pivot > current)
+                            {
+                                high = Pivot - 1;
+                                if (numbers[Pivot] < numbers[current])
+                                {
+                                    swap(Pivot, current);
+                                    Debug.WriteLine("swapped[" + Pivot + "]=" + numbers[Pivot] + " << [" + current + "]=" + numbers[current]);
+                                    swapped = true;
+                                    swapcount++;
+                                }
+                            }
+                            else
+                            {
+                                low = Pivot + 1;
+                                if (numbers[Pivot] > numbers[current])
+                                {
+                                    swap(Pivot, current);
+                                    Debug.WriteLine("swapped[" + Pivot + "]=" + numbers[Pivot] + " >> [" + current + "]=" + numbers[current]);
+                                    swapped = true;
+                                    swapcount++;
+                                }
+                            }
+                        }
+                        Debug.WriteLine("low: " + low + " mid: " + Pivot + " high: " + high);
+                    }
+                }
+            }
+            Debug.WriteLine("Swapcount: " + swapcount);
+        }
+        public void BinarySortTwo()
+        {
+            bool swapped = true;
+            int low = 0;
+            int high = numbers.Length-1;
+            int pivot = (low + high) / 2; ;
+            while (low <= high)
+            {
+
+                pivot = (low + high) / 2;
+                swapped = true;
+                while (swapped)
+                {
+                    swapped = false;
+                    for (int i = low; i <= pivot; i++)
+                    {
+                        if (numbers[i] > numbers[pivot])
+                        {
+                            swap(i, pivot);
+                            swapped = true;
+                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " >> [" + i + "]=" + numbers[i]);
+                        }
+                        if (numbers[high - i] < numbers[pivot])
+                        {
+                            swap(high - i, pivot);
+                            swapped = true;
+                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " >> [" + (high - i) + "]=" + numbers[high - i]);
+                        }
+                    }
+                    Debug.WriteLine("low: " + low + " mid: " + pivot + " high: " + high);
+                    
+                }
+                high = pivot - 1;
+            }
+
+        }
+        // going to try recursive in the am
     }
 }

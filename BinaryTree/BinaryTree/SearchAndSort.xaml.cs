@@ -115,7 +115,7 @@ namespace BinaryTree
 
         public void btnSort_click(object sender, EventArgs e)
         {
-            myNumbers.GuideOnly();
+            myNumbers.BinarySortTwo();
             lblShuffledList.Text = "Sorted with binary pivot sort: ";
             int counter = 0;
             foreach (int number in myNumbers.GetArray())
