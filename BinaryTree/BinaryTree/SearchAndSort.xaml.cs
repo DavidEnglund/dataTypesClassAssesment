@@ -115,8 +115,10 @@ namespace BinaryTree
 
         public void btnSort_click(object sender, EventArgs e)
         {
-            myNumbers.BinarySortTwo();
+            myNumbers.StartRecursion();
+            
             lblShuffledList.Text = "Sorted with binary pivot sort: ";
+            
             int counter = 0;
             foreach (int number in myNumbers.GetArray())
             {
@@ -124,6 +126,7 @@ namespace BinaryTree
                 lblShuffledList.Text += number + " , ";
                 counter++;
             }
+            myNumbers.BubbleSort();
         }
     }
 }

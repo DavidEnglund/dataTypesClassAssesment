@@ -70,7 +70,10 @@ namespace BinaryTree
             }
             numbers = escalating;
             sorted = true;
+            // DEBUG: I need ot get the lowest number and save it
+            savedLowest = numbers[0];
         }
+        int savedLowest;
         // a private funtion to switch two numbers using their indexes 
         private void swap(int placeOne, int placeTwo)
         {
@@ -205,7 +208,7 @@ namespace BinaryTree
                         {
                             swap(i, i + 1);
                             movement = true;
-                           // Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
+                            Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
                             comparisonsBubble++;
 
                         }
@@ -589,8 +592,71 @@ namespace BinaryTree
                 }
                 high = pivot - 1;
             }
-
+            
+        }
+        public void StartRecursion()
+        {
+            totalrecursion = 0;
+            Recursive(0, (numbers.Length) / 2, numbers.Length );
+            Debug.WriteLine("90=" + numbers[90] + " , 91=" + numbers[91]);
         }
         // going to try recursive in the am
+        int totalrecursion = 0;
+        private void Recursive(int low,int pivot,int high)
+        {
+            // now for a while swapped loop with a for loop
+            bool swapped = true;
+            while (swapped)
+            {
+                swapped = false;
+                for (int i = low; i < pivot; i++)
+                {
+                    if (numbers[i] > numbers[pivot])
+                    {
+                        swap(i, pivot);
+                        swapped = true;
+                        Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " >> [" + i + "]=" + numbers[i]);
+                        // DUBUG:
+                        if (i == 16 || i == 17)
+                        {
+                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (i) + "]=" + numbers[i]);
+                        }
+                    }
+                    int highside = high - pivot + i;
+                    if (highside > pivot && numbers[highside] < numbers[pivot])
+                    {
+                        swap(highside, pivot);
+                        swapped = true;
+                        Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (highside) + "]=" + numbers[highside]);
+                        // DUBUG:
+                        if(highside == 16 || highside == 17)
+                        {
+                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (highside) + "]=" + numbers[highside]);
+                        }
+                    }
+                    // DEBUG:
+                    if(pivot == 16 || pivot ==15)
+                    {
+                        Debug.WriteLine("swapped[" + 16 + "]=" + numbers[16] + " << [" + (17) + "]=" + numbers[17]);
+                        Debug.WriteLine("swapped[" + 16 + "]=" + numbers[16] + " << [" + (15) + "]=" + numbers[15]);
+                    }
+                }
+                Debug.WriteLine("low: " + low + " mid: " + pivot + " high: " + high);
+
+            }
+            // putting in the end code 1st
+            totalrecursion++;
+            Debug.WriteLine("low: " + low + " mid: " + pivot + " high: " + high + " total recursions: " + totalrecursion);
+            pivot = (low + high) / 2;
+            if(low < pivot)
+            {
+                Recursive(low, (low + pivot) / 2, pivot);
+                Recursive(pivot, (pivot + high) / 2, high);
+            }
+            if (pivot < high)
+            {
+                //Recursive(pivot, (pivot + high) / 2, high);
+            }
+        }
     }
 }
