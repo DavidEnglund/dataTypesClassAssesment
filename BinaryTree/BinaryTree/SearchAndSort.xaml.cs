@@ -19,7 +19,7 @@ namespace BinaryTree
             
 
             // lets run the arrary createor here
-            myNumbers.CreateEscalating(12, 60);
+            myNumbers.CreateEscalating(12, 400);
             // now lets list those number and see what we get
             foreach (int number in myNumbers.GetArray())
             {
@@ -119,6 +119,38 @@ namespace BinaryTree
             
             lblShuffledList.Text = "Sorted with binary pivot sort: ";
             
+            int counter = 0;
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblShuffledList.Text += "[" + counter + "]=";
+                lblShuffledList.Text += number + " , ";
+                counter++;
+            }
+            myNumbers.BubbleSort();
+        }
+
+        public void btnBubble_click(object sender, EventArgs e)
+        {
+            myNumbers.BubbleSort();
+
+            lblShuffledList.Text = "Sorted with bubble sort: ";
+
+            int counter = 0;
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblShuffledList.Text += "[" + counter + "]=";
+                lblShuffledList.Text += number + " , ";
+                counter++;
+            }
+           
+        }
+
+        public void btnTree_click(object sender, EventArgs e)
+        {
+            myNumbers.BinarySort();
+
+            lblShuffledList.Text = "Sorted with tree sort: ";
+
             int counter = 0;
             foreach (int number in myNumbers.GetArray())
             {

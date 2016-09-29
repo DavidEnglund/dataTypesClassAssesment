@@ -196,7 +196,7 @@ namespace BinaryTree
             {
                 movement = false;
                 passes++;
-                Debug.WriteLine("---=== pass " + passes + " ===---");
+               // Debug.WriteLine("---=== pass " + passes + " ===---");
                 for (int i = 0; i < numbers.Length; i++)
                 {
                     // and now for the bubble
@@ -208,7 +208,7 @@ namespace BinaryTree
                         {
                             swap(i, i + 1);
                             movement = true;
-                            Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
+                          //  Debug.WriteLine(numbers[i] + ">==>" + numbers[i + 1] + " --- " + i);
                             comparisonsBubble++;
 
                         }
@@ -232,6 +232,7 @@ namespace BinaryTree
                     //Debug.WriteLine("---=== Totl:  " + (comparisonsPost + comparisonsBubble) + " ===---");
                 }
             }
+            Debug.WriteLine("---=== pass " + passes + " ===---");
             Debug.WriteLine("---=== Bubl: " + comparisonsBubble + " ===---");
             sorted = true;
         }
