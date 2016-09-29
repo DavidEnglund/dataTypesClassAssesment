@@ -19,7 +19,7 @@ namespace BinaryTree
             
 
             // lets run the arrary createor here
-            myNumbers.CreateEscalating(12, 92);
+            myNumbers.CreateEscalating(12, 60);
             // now lets list those number and see what we get
             foreach (int number in myNumbers.GetArray())
             {
@@ -115,7 +115,7 @@ namespace BinaryTree
 
         public void btnSort_click(object sender, EventArgs e)
         {
-            myNumbers.StartRecursion();
+            myNumbers.BinarySort();
             
             lblShuffledList.Text = "Sorted with binary pivot sort: ";
             

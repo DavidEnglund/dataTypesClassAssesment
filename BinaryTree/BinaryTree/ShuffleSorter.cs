@@ -507,7 +507,7 @@ namespace BinaryTree
 
         // well the guide only failed so I am going to try copying the binary search technique and seeing if that even works
         // works but is slow - will try something i think will work better
-        public void BinarySort()
+        public void BinarySortOne()
         {
             bool swapped = true;
             int swapcount = 0;
@@ -594,20 +594,21 @@ namespace BinaryTree
             }
             
         }
-        public void StartRecursion()
+        public void BinarySort()
         {
-            totalrecursion = 0;
-            Recursive(0, (numbers.Length) / 2, numbers.Length );
-            Debug.WriteLine("90=" + numbers[90] + " , 91=" + numbers[91]);
+            BinaryRecursive(0, (numbers.Length) / 2, numbers.Length,0 );
+            Debug.WriteLine("swaps " + swaps);
         }
-        // going to try recursive in the am
-        int totalrecursion = 0;
-        private void Recursive(int low,int pivot,int high)
+        // I just want to count how many swaps this thing makes
+        int swaps = 0;
+
+        private void BinaryRecursive(int low,int pivot,int high,int depth)
         {
-            // now for a while swapped loop with a for loop
+            // now for a while swapped loop with a for loop inside to go though the set elements
             bool swapped = true;
             while (swapped)
             {
+                // this gets set to false each time and if it remains so the loop ends
                 swapped = false;
                 for (int i = low; i < pivot; i++)
                 {
@@ -615,47 +616,23 @@ namespace BinaryTree
                     {
                         swap(i, pivot);
                         swapped = true;
-                        Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " >> [" + i + "]=" + numbers[i]);
-                        // DUBUG:
-                        if (i == 16 || i == 17)
-                        {
-                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (i) + "]=" + numbers[i]);
-                        }
+                        swaps++; 
                     }
                     int highside = high - pivot + i;
                     if (highside > pivot && numbers[highside] < numbers[pivot])
                     {
                         swap(highside, pivot);
                         swapped = true;
-                        Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (highside) + "]=" + numbers[highside]);
-                        // DUBUG:
-                        if(highside == 16 || highside == 17)
-                        {
-                            Debug.WriteLine("swapped[" + pivot + "]=" + numbers[pivot] + " << [" + (highside) + "]=" + numbers[highside]);
-                        }
-                    }
-                    // DEBUG:
-                    if(pivot == 16 || pivot ==15)
-                    {
-                        Debug.WriteLine("swapped[" + 16 + "]=" + numbers[16] + " << [" + (17) + "]=" + numbers[17]);
-                        Debug.WriteLine("swapped[" + 16 + "]=" + numbers[16] + " << [" + (15) + "]=" + numbers[15]);
+                        swaps++;
                     }
                 }
-                Debug.WriteLine("low: " + low + " mid: " + pivot + " high: " + high);
-
             }
-            // putting in the end code 1st
-            totalrecursion++;
-            Debug.WriteLine("low: " + low + " mid: " + pivot + " high: " + high + " total recursions: " + totalrecursion);
+            // and now its done time to start the next set deeper
             pivot = (low + high) / 2;
             if(low < pivot)
             {
-                Recursive(low, (low + pivot) / 2, pivot);
-                Recursive(pivot, (pivot + high) / 2, high);
-            }
-            if (pivot < high)
-            {
-                //Recursive(pivot, (pivot + high) / 2, high);
+                BinaryRecursive(low, (low + pivot) / 2, pivot,depth+1);
+                BinaryRecursive(pivot, (pivot + high) / 2, high,depth+1);
             }
         }
     }
