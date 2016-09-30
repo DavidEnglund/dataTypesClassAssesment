@@ -9,11 +9,12 @@ namespace BinaryTree
 {
     public class App : Application
     {
+
         public App()
         {
             // The root page of your application
             // MainPage = new NavigationPage(new Page1());
-            MainPage = new NavigationPage( new Page1());
+            MainPage = new NavigationPage( new TreeAndList());
             MainPage.Icon = null;
             MainPage.Title = "Binary Tree";
             MainPage.Padding = 1;

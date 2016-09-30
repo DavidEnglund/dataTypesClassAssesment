@@ -42,8 +42,8 @@
     <Compile Include="HashTableView.xaml.cs">
       <DependentUpon>HashTableView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="TreeAndList.xaml.cs">
+      <DependentUpon>TreeAndList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchAndSort.xaml.cs">
@@ -71,7 +71,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Page1.xaml">
+    <EmbeddedResource Include="TreeAndList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

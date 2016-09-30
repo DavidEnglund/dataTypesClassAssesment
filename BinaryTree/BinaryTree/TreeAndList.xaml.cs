@@ -13,14 +13,14 @@ using Xamarin.Forms;
 // to a minimun
 namespace BinaryTree
 {
-    public partial class Page1 : ContentPage
+    public partial class TreeAndList : ContentPage
     {
         // we will need a binary tree and a dbl link list
         BinTree myTree = new BinTree(500, "Trunk");
         dblLinked nodeList = new dblLinked("start");
         // and a dbl link list of saved keys to demonstrate adding and editing a dbl link list
         dblLinked saveList = new dblLinked();
-        public Page1()
+        public TreeAndList()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);

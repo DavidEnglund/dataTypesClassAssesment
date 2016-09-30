@@ -111,5 +111,14 @@ namespace BinaryTree
             }
 
         }
+        // nav buttons
+        private void btnBinary_clicked(object sender,EventArgs e)
+        {
+            Navigation.PushAsync(new TreeAndList());
+        }
+        private void btnSort_clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SearchAndSort());
+        }
     }
 }

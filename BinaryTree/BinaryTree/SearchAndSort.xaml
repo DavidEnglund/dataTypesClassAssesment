@@ -22,5 +22,11 @@
         <Label x:Name="lblShuffledList" />
       </StackLayout>
     </ScrollView>
+    <StackLayout Orientation="Horizontal">
+
+      <Button Text=" &#60;&#60;&#60; Binary Tree" x:Name="btnTreeAndList" Clicked="btnTreeAndList_click" />
+      <Button Text="&#60;&#60; Hash Tables" x:Name="btnHash" Clicked="btnHash_click" />
+
+    </StackLayout>
   </StackLayout>
 </ContentPage>

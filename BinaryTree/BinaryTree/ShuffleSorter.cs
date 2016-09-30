@@ -595,6 +595,7 @@ namespace BinaryTree
             }
             
         }
+        // we have a winner
         public void BinarySort()
         {
             BinaryRecursive(0, (numbers.Length) / 2, numbers.Length,0 );
@@ -611,6 +612,7 @@ namespace BinaryTree
             {
                 // this gets set to false each time and if it remains so the loop ends
                 swapped = false;
+                //first lets do the one that is below the pivot
                 for (int i = low; i < pivot; i++)
                 {
                     if (numbers[i] > numbers[pivot])
@@ -619,6 +621,7 @@ namespace BinaryTree
                         swapped = true;
                         swaps++; 
                     }
+                    //then get the number for the one on the upper side and check and swap it if needed
                     int highside = high - pivot + i;
                     if (highside > pivot && numbers[highside] < numbers[pivot])
                     {

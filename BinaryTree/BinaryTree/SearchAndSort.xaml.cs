@@ -175,5 +175,14 @@ namespace BinaryTree
             }
 
         }
+        // navigaition buttons
+        private void btnTreeAndList_click(object sender,EventArgs e)
+        {
+            Navigation.PushAsync(new TreeAndList());
+        }
+        private void btnHash_click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HashTableView());
+        }
     }
 }

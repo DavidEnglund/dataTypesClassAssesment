@@ -6,7 +6,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BinaryTree.Page1" BackgroundColor="#4422aa" Padding="1">
+             x:Class="BinaryTree.TreeAndList" BackgroundColor="#4422aa" Padding="1">
   <ContentPage.Resources>
     <ResourceDictionary>
       <Style TargetType="Button">
@@ -58,7 +58,7 @@
     </StackLayout>
     <StackLayout Orientation="Horizontal">
       <Button x:Name="btnGoToHash" Text="Hash Tables >>" Clicked="btnGoToHash_click" />
-      <Button x:Name="btnGoToSort" Text="Sort and search >>" Clicked="btnGoToSort_click" />
+      <Button x:Name="btnGoToSort" Text="Sort and search >>>" Clicked="btnGoToSort_click" />
     </StackLayout>
   </StackLayout>
 
