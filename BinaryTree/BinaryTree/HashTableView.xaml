@@ -9,7 +9,7 @@
         <RowDefinition Height="auto" />
         <RowDefinition Height="auto" />    
         <RowDefinition Height="auto" /> 
-        <RowDefinition Height="auto" />
+        <RowDefinition Height="*" />
         <RowDefinition Height="auto" />
       </Grid.RowDefinitions>
       <Grid.ColumnDefinitions>
@@ -24,7 +24,7 @@
            
       <Button x:Name="btnAdd" Grid.Row="2" Grid.Column="0" Text="Add Key" Clicked="btnAdd_click" />
       <Button x:Name="btnRefresh" Grid.Row="2" Grid.Column="1" Text="Refresh Lists" Clicked="btnRefresh_click" />
-      <StackLayout Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" >
+      <ScrollView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" >
         <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -40,7 +40,7 @@
           <Label x:Name="lblHashList" Text="" Grid.Row="1" Grid.Column="0" />
           <Label x:Name="lblRetrivedList" Text="" Grid.Row="1" Grid.Column="1" />
       </Grid>
-      </StackLayout>
+      </ScrollView>
       <Button x:Name="btnBinary" Text="&#60;&#60;  Binary tree" Clicked="btnBinary_clicked" Grid.Column="0" Grid.Row="4" />
       <Button x:Name="btnSort" Text="Sort and search >>" Clicked="btnSort_clicked" Grid.Column="1" Grid.Row="4" />
     </Grid>
