@@ -6,6 +6,7 @@
     <StackLayout Orientation="Horizontal">
       <Entry x:Name="entNumber" HorizontalOptions="FillAndExpand" Keyboard="Numeric" />
       <Button x:Name="btnFind" Text="Find number" Clicked="btnFind_click"/>
+      <Button Text="Change Size" x:Name="btnSize" Clicked="btnSize_click" />
       <Button Text="Shuffle" x:Name="btnShuffle" Clicked="btnShuffle_click" />
     </StackLayout>
     <StackLayout Orientation="Horizontal">

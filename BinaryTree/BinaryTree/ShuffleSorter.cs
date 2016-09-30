@@ -636,5 +636,30 @@ namespace BinaryTree
                 BinaryRecursive(pivot, (pivot + high) / 2, high,depth+1);
             }
         }
+        // and now for a tree sort - I know I have spent to long on this but I was stuck writing the report/essay and this has got me interested
+        public void TreeSort()
+        {
+            // start a new tree
+            BinTree sortingTree = new BinTree(numbers[0],"tree sort");
+            // go thought the array adding number to the tree -this will add the first number twice  but the tree will just not do anything but log it failed to add
+            foreach(int number in numbers)
+            {
+                sortingTree.addNode(number, "tree sort");
+            }
+            // run the indexfrom lowest wich will go thouth the tree and get the indexes from the lowest to the highest - sorted. then go to the start of the link list
+            dblLinked treeSorted = sortingTree.IndexFromLowest();
+            treeSorted.goToStart();
+
+            // the go right will skip the 1st so I will add that one manualy
+            Debug.WriteLine(treeSorted.getData());
+            numbers[0] = (int)treeSorted.getData();
+            // start at one as the first has been done already
+            int counter = 1;
+            while (treeSorted.goRight())
+            {
+                numbers[counter] = (int)treeSorted.getData();
+                counter++;
+            }
+        }
     }
 }

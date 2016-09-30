@@ -147,7 +147,7 @@ namespace BinaryTree
 
         public void btnTree_click(object sender, EventArgs e)
         {
-            myNumbers.BinarySort();
+            myNumbers.TreeSort();
 
             lblShuffledList.Text = "Sorted with tree sort: ";
 
@@ -158,7 +158,22 @@ namespace BinaryTree
                 lblShuffledList.Text += number + " , ";
                 counter++;
             }
-            myNumbers.BubbleSort();
+            
+        }
+        public void btnSize_click(object sender, EventArgs e)
+        {
+            int arraySize = 0;
+            int.TryParse(entNumber.Text, out arraySize);
+            myNumbers.CreateEscalating(12,arraySize);
+            lblNumberList.Text = "Original array: ";
+            int counter = 0;
+            foreach (int number in myNumbers.GetArray())
+            {
+                lblNumberList.Text += "[" + counter + "]=";
+                lblNumberList.Text += number + "  , ";
+                counter++;
+            }
+
         }
     }
 }

@@ -481,6 +481,76 @@ namespace BinaryTree
                 return false;
             }
         }
+        // getting just the indexes in order - for reasons
+        // left side iteration or list from lowest to highest
+        private dblLinked indexLeftSideItr(TreeNode checkIt, bool fromChild, dblLinked results)
+        {
+            if (fromChild)
+            {
+                if (checkIt.right == null)
+                {
+                    results.addToEnd(checkIt.sortingNum);
+                }
+                if (checkIt.parent != null)
+                {
+                    if (checkIt.parent.right != null && checkIt.sortingNum < checkIt.parent.sortingNum)
+                    {
+                        results.addToEnd(checkIt.parent.sortingNum);
+                        return indexLeftSideItr(checkIt.parent.right, false, results);
+                    }
+                    else
+                    {
+                        return indexLeftSideItr(checkIt.parent, true, results);
+                    }
+                }
+                else
+                {
+                    return results;
+                }
+            }
+            // ok so that is if its coming from a kid now if it coming from anywhere else
+            else
+            {
+                if (checkIt.left != null)
+                {
+                    return indexLeftSideItr(checkIt.left, false, results);
+                }
+                else
+                {
+                    results.addToEnd(checkIt.sortingNum);
+                    if (checkIt.right != null)
+                    {
+                        return indexLeftSideItr(checkIt.right, false, results);
+                    }
+                    else
+                    {
+                        if (checkIt.parent != null)
+                        {
+                            // I forgot to check for a sister
+                            if (checkIt.parent.right != null && checkIt.sortingNum < checkIt.parent.sortingNum)
+                            {
+                                results.addToEnd(checkIt.parent.sortingNum);
+                                return indexLeftSideItr(checkIt.parent.right, false, results);
+                            }
+                            else
+                            {
+                                return indexLeftSideItr(checkIt.parent, true, results);
+                            }
+                        }
+                        else
+                        {
+                            return results;
+                        }
+                    }
+                }
+            }
+            //return results;
+        }
+        // and now a function to kick it off
+        public dblLinked IndexFromLowest()
+        {
+            return indexLeftSideItr(trunk, false, new dblLinked());
+        }
 
     }
 }
