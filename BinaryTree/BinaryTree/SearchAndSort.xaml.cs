@@ -10,42 +10,22 @@ namespace BinaryTree
 {
     public partial class SearchAndSort : ContentPage
     {
+        // create the array sorter 
         ShuffleSorter myNumbers = new ShuffleSorter();
+
         public SearchAndSort()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            // create the array sorter 
-            
 
             // lets run the arrary createor here
-            myNumbers.CreateEscalating(12, 400);
+            myNumbers.CreateEscalating(12, 60);
             // now lets list those number and see what we get
             foreach (int number in myNumbers.GetArray())
             {
                 lblNumberList.Text += number + " , ";
             }
-
-            // now lets shuffle and display the shuffled array
-            //myNumbers.Shuffle(1);
-            // a new exact copy to perfrom a stright bubble on
-            ShuffleSorter bubNumber = new ShuffleSorter(myNumbers.GetArray());
-            /*
-            foreach (int number in myNumbers.GetArray())
-            {
-                lblShuffledList.Text += number + " , ";
-            }
-            */
-
-            // ok so a test of the guidepost sort - I dont think on its own it will work but it should drasitcly cut down a followed bubble sort
-            //myNumbers.GuidepostSort();
-            // ================== tests ===================
-            // these will run and not display anything - I'll undo the commenting out of above after tests
-            //myNumbers.BubbleSort();
-            //bubNumber.GuideOnly();
-           // myNumbers.StartToEnd();
-           // myNumbers.BubbleSort();
-            
+            // list the array as it was when created
             lblNumberList.Text = "Original array: ";
             int counter = 0;
             foreach (int number in myNumbers.GetArray())
@@ -54,24 +34,8 @@ namespace BinaryTree
                 lblNumberList.Text += number + "  , ";
                 counter++;
             }
-
-            /*
-            lblShuffledList.Text = "outside in ";
-            int counter = 0;
-            foreach (int number in bubNumber.GetArray())
-            {
-                if (number == bubNumber.GetArray()[bubNumber.GetCentre()])
-                {
-                    lblShuffledList.Text += "-->";
-                }
-                lblShuffledList.Text += "[" + counter + "]=";
-                lblShuffledList.Text += number + " , ";
-                counter++;
-            }
-            // bubNumber.BubbleSort();
-            */
-
         }
+        // this will run the search and display where in the array the data is - or an error message
         public void btnFind_click(object sender, EventArgs e)
         {
             int lookFor;
@@ -96,10 +60,8 @@ namespace BinaryTree
             {
                 DisplayAlert("Search", "Found at: " + found, "OK");
             }
-
-
         }
-
+        // this will shuffle the array and display the shuffled array below the original
         public void btnShuffle_click(object sender,EventArgs e)
         {
             myNumbers.Shuffle();
@@ -112,7 +74,7 @@ namespace BinaryTree
                 counter++;
             }
         }
-
+        // this will sort the array with binary pivot sort and display the sorted below the original for comparision
         public void btnSort_click(object sender, EventArgs e)
         {
             myNumbers.BinarySort();
@@ -128,7 +90,7 @@ namespace BinaryTree
             }
             myNumbers.BubbleSort();
         }
-
+        // this will sort the array with bubble sort and display the sorted below the original for comparision
         public void btnBubble_click(object sender, EventArgs e)
         {
             myNumbers.BubbleSort();
@@ -144,7 +106,7 @@ namespace BinaryTree
             }
            
         }
-
+        // this will sort the array with tree sort and display the sorted below the original for comparision
         public void btnTree_click(object sender, EventArgs e)
         {
             myNumbers.TreeSort();
@@ -160,6 +122,7 @@ namespace BinaryTree
             }
             
         }
+        // this will generate a new array sized to the number inputted and list it as the new original
         public void btnSize_click(object sender, EventArgs e)
         {
             int arraySize = 0;
