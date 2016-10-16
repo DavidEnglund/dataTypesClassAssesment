@@ -32,6 +32,12 @@ namespace BinaryTree
             else
             {
                 node.leftNode = new linkNode(node.leftNode, input, node);
+                // now to change the old right  node's left to this one if it exisits
+                goLeft();
+                if (node.leftNode != null)
+                {
+                    node.leftNode.rightNode = node;
+                }
             }
         }
         public void addRight(Object input)
@@ -43,6 +49,12 @@ namespace BinaryTree
             else
             {
                 node.rightNode = new linkNode(node, input, node.rightNode);
+                // now to change the old right  node's left to this one if it exisits
+                goRight();
+                if(node.rightNode != null)
+                {
+                    node.rightNode.leftNode = node;
+                }
             }
         }
         // now for adding to the end or beginning

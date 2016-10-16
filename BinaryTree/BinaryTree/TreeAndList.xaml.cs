@@ -91,7 +91,7 @@ namespace BinaryTree
             if (foundNode != null)
             {
                 DisplayAlert("node Saved", foundNode.ToString(), "Okay");
-                saveList.addToEnd(foundNode);
+                saveList.addRight(foundNode);
                 lblSaveList.Text = saveList.getData().ToString();
             }
             else
