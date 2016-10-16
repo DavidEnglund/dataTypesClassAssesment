@@ -290,6 +290,11 @@ namespace BinaryTree
                 if(node.leftNode != null)
                 {
                     node.leftNode = node.leftNode.leftNode;
+                    // and set the new left node if it exist to have this currnt node as its right
+                    if (node.leftNode != null)
+                    {
+                        node.leftNode.rightNode = node;
+                    }
                 }
                 else
                 {
@@ -306,6 +311,11 @@ namespace BinaryTree
                 if (node.rightNode != null)
                 {
                     node.rightNode = node.rightNode.rightNode;
+                    // and set the new right node if it exist to have this currnt node as its left
+                    if(node.rightNode != null)
+                    {
+                        node.rightNode.leftNode = node;
+                    }
                 }
                 else
                 {
