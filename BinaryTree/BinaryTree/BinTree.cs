@@ -482,12 +482,17 @@ namespace BinaryTree
                 // first lets check if what kids we have to decide what goes where
                 if (toDelete.left != null)
                 {
-                    // ok so now we need to get the right side leaf of the left child
-                    TreeNode leftRightLeaf = findRightLeaf(toDelete.left);
-                    // ok now lets save the right child of the delete node to the left
-                    leftRightLeaf.right = toDelete.right;
-                    //ok so I have fogotten to change the right leaf parent
-                    toDelete.right.parent = leftRightLeaf;
+                    // saving the right side child(daughter) if it even has one to its proper place
+                    if (toDelete.right != null)
+                    {
+                        // not going to do this now because late and cant think though it atm but I could just run the right child though the add function but might need to do more than this
+                        // ok so now we need to get the right side leaf of the left child
+                        TreeNode leftRightLeaf = findRightLeaf(toDelete.left);
+                        // ok now lets save the right child of the delete node to the left
+                        leftRightLeaf.right = toDelete.right;
+                        //ok so I have fogotten to change the right leaf parent
+                        toDelete.right.parent = leftRightLeaf;
+                    }
                     // now to cut out the delete by adding its left child to its place in the parent
                     // but first lest just check it has a parent(basicly if its the trunk)
                     if (toDelete.parent != null)
@@ -510,6 +515,7 @@ namespace BinaryTree
                         // ok so no parent node means the trunk node  and we have already saved the right side node
                         // to the right leaf of the left so lets just make the left the trunk
                         trunk = toDelete.left;
+                        trunk.parent = null;
                     }
                 }
                 
@@ -531,14 +537,19 @@ namespace BinaryTree
                         else
                         {
                             toDelete.parent.right = toDelete.right;
-                            // and I need to set the left leaf's parent to its new host
-                            toDelete.right.parent = toDelete.parent;
+                            // and I need to set the right leaf's parent to its new host
+                            // if it has a right side, if not then its a leaf with no children
+                            if (toDelete.right != null)
+                            {
+                                toDelete.right.parent = toDelete.parent;
+                            }
                         }
                     }
                     else
                     {
                         // ok so we have no left node and we are deleting the trunk node
                         trunk = toDelete.right;
+                        trunk.parent = null;
                     }
                 }
                
