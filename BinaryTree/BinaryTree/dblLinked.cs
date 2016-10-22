@@ -33,10 +33,10 @@ namespace BinaryTree
             {
                 node.leftNode = new linkNode(node.leftNode, input, node);
                 // now to change the old right  node's left to this one if it exisits
-                goLeft();
-                if (node.leftNode != null)
+                //goLeft();
+                if (node.leftNode.leftNode != null)
                 {
-                    node.leftNode.rightNode = node;
+                    node.leftNode.leftNode.rightNode = node;
                 }
             }
         }
@@ -50,10 +50,10 @@ namespace BinaryTree
             {
                 node.rightNode = new linkNode(node, input, node.rightNode);
                 // now to change the old right  node's left to this one if it exisits
-                goRight();
-                if(node.rightNode != null)
+                //goRight();
+                if(node.rightNode.rightNode != null)
                 {
-                    node.rightNode.leftNode = node;
+                    node.rightNode.rightNode.leftNode = node;
                 }
             }
         }

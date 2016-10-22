@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,9 @@ namespace BinaryTree
             Random rnd = new Random();
             for (int i = 0; i < 20; i++)
             {
-                myTree.addNode(rnd.Next(1, 1001), "random node");
+                int rnum = rnd.Next(1, 1001);
+                myTree.addNode(rnum, "random node");
+                Debug.WriteLine("--== " + rnum + "==--");
                 //nodeList.addToEnd(i + " added node"); // add a node to a test dbl link list
             }
             // now lets clear to log to make it easier to see wht I do
@@ -39,6 +42,7 @@ namespace BinaryTree
             nodeList = myTree.straightItr();
             nodeList.goToStart();
             lblLink.Text = nodeList.getData().ToString();
+            Debug.WriteLine("--== " + "dsfgdsghdfsghdfgjdfglhkjdshflghdslkfghjdslfkjghdfslkjg;ldfgj;ldsfhgldsjfhg;lnfghjdfslkjghlsdjfghldsjfg" + "==--");
         }
         public void addKey_click(object sender, EventArgs e)
         {
@@ -57,6 +61,7 @@ namespace BinaryTree
         // and now for something compltely... lets just find it
         public void findKey_click(object sender, EventArgs e)
         {
+            Debug.WriteLine("--== " + "dsfgdsghdfsghdfgjdfglhkjdshflghdslkfghjdslfkjghdfslkjg;ldfgj;ldsfhgldsjfhg;lnfghjdfslkjghlsdjfghldsjfg" + " ==--");
             // how to do an alert or toast or something like that
             //DisplayAlert("find key", "key found", "go away");
             // like that aparently
@@ -133,11 +138,11 @@ namespace BinaryTree
             //myTree.clearLog();
             //lblLog.Text = myTree.fromHighest().ToString();
             // creating the straight iteration list
-            nodeList = myTree.fromHighest();
+            nodeList = myTree.preOrder();
             nodeList.goToStart();
             lblLink.Text = nodeList.getData().ToString();
             //change the label above the link list display to say right side iteration
-            lblIteration.Text = "Right Side Iteration";
+            lblIteration.Text = "Pre-order Iteration";
 
         }
         // dbl link list buttons

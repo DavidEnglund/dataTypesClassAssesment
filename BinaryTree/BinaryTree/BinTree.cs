@@ -196,7 +196,7 @@ namespace BinaryTree
         }
 
         ///////////////////////////////// iterations
-        // left side iteration or list from lowest to highest
+        // left side iteration or list from lowest to highest otherwise known as in order traversal
         public dblLinked leftSideItr(TreeNode checkIt,bool fromChild, dblLinked results)
         {
             if (fromChild)
@@ -342,7 +342,7 @@ namespace BinaryTree
         }
 
         // ###################################### Straight Iteration
-        // this is a left first straight iteration
+        // this is a left first straight iteration otherwise known as a level order traversal
         public dblLinked straightItr()
         {
             dblLinked straightList = new dblLinked(trunk);
@@ -374,13 +374,94 @@ namespace BinaryTree
                     straightList.addToEnd(tempTreeNode.right);
                 }
                 // go to the next node in the list
-                straightList.goRight();
-            } while (straightList.isRight());
+                //straightList.goRight();
+            } while (straightList.goRight());
             // well thats it for the loop
             // it should should get though them all as it will stopp adding more 
             // at the leaf nodes
             return straightList;
         }
+
+        // left side iteration or list from lowest to highest recording any time we dont go up the tree otherwise known as pre order traversal
+        public dblLinked preOrderItr(TreeNode checkIt, bool fromChild, dblLinked results)
+        {
+            if (fromChild)
+            {
+                /*
+                if (checkIt.right == null)
+                {
+                    results.addToEnd(checkIt.ToString());
+                }*/
+                // parent null means we are back at the trunk
+                if (checkIt.parent != null)
+                {
+                    // if its coming from the left go parent right(sister) if possible otherwise go up
+                    if (checkIt.parent.right != null && checkIt.sortingNum < checkIt.parent.sortingNum)
+                    {
+                       // results.addToEnd(checkIt.parent.ToString());
+                        return preOrderItr(checkIt.parent.right, false, results);
+                    }
+                    else
+                    {
+                        return preOrderItr(checkIt.parent, true, results);
+                    }
+                }
+                else
+                {
+                    // back to trunk so now its over
+                    return results;
+                }
+            }
+            // ok so that is if its coming from a kid now if it coming from anywhere else
+            else
+            {
+                // just record as long as we are not going back up
+                results.addToEnd(checkIt.ToString());
+                // first try to go down left(son) if not try right(daughter)
+                if (checkIt.left != null)
+                {
+                    return preOrderItr(checkIt.left, false, results);
+                }
+                else
+                {
+                   // results.addToEnd(checkIt.ToString());
+                   //well there was no son(left) so lets see if there was a daughter(right)
+                    if (checkIt.right != null)
+                    {
+                        return preOrderItr(checkIt.right, false, results);
+                    }
+                    else
+                    {
+                        // no left(son) or right(daughter) so if there is no parent right(sister) to to the parent
+                        if (checkIt.parent != null)
+                        {
+                            // I forgot to check for a sister
+                            if (checkIt.parent.right != null && checkIt.sortingNum < checkIt.parent.sortingNum)
+                            {
+                               // results.addToEnd(checkIt.parent.ToString());
+                                return preOrderItr(checkIt.parent.right, false, results);
+                            }
+                            else
+                            {
+                                return preOrderItr(checkIt.parent, true, results);
+                            }
+                        }
+                        else
+                        {
+                            // no son, daughter, or parent so we are alone at the trunk and can end
+                            return results;
+                        }
+                    }
+                }
+            }
+            //return results;
+        }
+        // and now a function to kick it off
+        public dblLinked preOrder()
+        {
+            return preOrderItr(trunk, false, new dblLinked());
+        }
+
         // this function measures whether the left side of one node is longer than the right
         // of another
         // f it all I dont have to balance it so left side pref it is
@@ -405,6 +486,8 @@ namespace BinaryTree
                     TreeNode leftRightLeaf = findRightLeaf(toDelete.left);
                     // ok now lets save the right child of the delete node to the left
                     leftRightLeaf.right = toDelete.right;
+                    //ok so I have fogotten to change the right leaf parent
+                    toDelete.right.parent = leftRightLeaf;
                     // now to cut out the delete by adding its left child to its place in the parent
                     // but first lest just check it has a parent(basicly if its the trunk)
                     if (toDelete.parent != null)
@@ -412,10 +495,14 @@ namespace BinaryTree
                         if (toDelete == toDelete.parent.left)
                         {
                             toDelete.parent.left = toDelete.left;
+                            // and I need to set the left leaf's parent to its new host
+                            toDelete.left.parent = toDelete.parent;
                         }
                         else
                         {
                             toDelete.parent.right = toDelete.left;
+                            // and I need to set the left leaf's parent to its new host
+                            toDelete.left.parent = toDelete.parent;
                         }
                     }
                     else
@@ -438,10 +525,14 @@ namespace BinaryTree
                         if (toDelete == toDelete.parent.left)
                         {
                             toDelete.parent.left = toDelete.right;
+                            // and I need to set the left leaf's parent to its new host
+                            toDelete.right.parent = toDelete.parent;
                         }
                         else
                         {
                             toDelete.parent.right = toDelete.right;
+                            // and I need to set the left leaf's parent to its new host
+                            toDelete.right.parent = toDelete.parent;
                         }
                     }
                     else

@@ -35,9 +35,9 @@
     </StackLayout>
     <Label Text="get binary tree iterations" />
     <StackLayout Orientation="Horizontal">
-      <Button x:Name="btnLeft" Text="Left" Clicked="btnLeft_click" HorizontalOptions="StartAndExpand" />
-      <Button x:Name="btnStraight" Text="Straight" Clicked="btnStraight_click" HorizontalOptions="CenterAndExpand" />
-      <Button x:Name="btnRight" Text="Right" Clicked="btnRight_click" HorizontalOptions="EndAndExpand" />
+      <Button x:Name="btnLeft" Text="in" Clicked="btnLeft_click" HorizontalOptions="StartAndExpand" />
+      <Button x:Name="btnStraight" Text="level" Clicked="btnStraight_click" HorizontalOptions="CenterAndExpand" />
+      <Button x:Name="btnRight" Text="pre" Clicked="btnRight_click" HorizontalOptions="EndAndExpand" />
    </StackLayout>
     <Label x:Name="lblIteration" Text="Straight Iteration" />
     <StackLayout Orientation="Horizontal">
