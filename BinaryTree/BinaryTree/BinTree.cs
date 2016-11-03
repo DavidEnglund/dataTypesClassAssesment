@@ -52,11 +52,19 @@ namespace BinaryTree
         // a simple search than return the node looked for
         public TreeNode findNode(int findMe)
         {
-            logEntry("============================");
-            logEntry("find by number");
-            if (lookFor(trunk, findMe))
+            // check that the trunk exists before doing anything
+            if (trunk != null)
             {
-                return currentNode;
+                logEntry("============================");
+                logEntry("find by number");
+                if (lookFor(trunk, findMe))
+                {
+                    return currentNode;
+                }
+                else
+                {
+                    return null;
+                }
             }
             else
             {
@@ -67,11 +75,19 @@ namespace BinaryTree
         // a simple search that returns true or false if the node exists or not
         public bool doesNodeExist(int findMe)
         {
-            logEntry("============================");
-            logEntry("check by number");
-            if (lookFor(trunk, findMe))
+            // check that the trunk exists before doing anything
+            if (trunk != null)
             {
-                return true;
+                logEntry("============================");
+                logEntry("check by number");
+                if (lookFor(trunk, findMe))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
@@ -82,36 +98,48 @@ namespace BinaryTree
         // lets add a node
         public bool addNode(int newNumber,string newData)
         {
-            logEntry("============================");
-            logEntry("add a node");
-           // look for the position the new node go's to
-            if (!lookFor(trunk ,newNumber))
+            // check that the trunk exists before doing anything
+            if (trunk != null)
             {
-                // create the node
-                TreeNode newNode = new TreeNode(currentNode, newNumber, newData);
-                // put it either left or right depending
-                if (newNode.sortingNum < currentNode.sortingNum)
+                logEntry("============================");
+                logEntry("add a node");
+                // look for the position the new node goes to
+                if (!lookFor(trunk, newNumber))
                 {
+                    // create the node
+                    TreeNode newNode = new TreeNode(currentNode, newNumber, newData);
+                    // put it either left or right depending
+                    if (newNode.sortingNum < currentNode.sortingNum)
+                    {
 
-                    currentNode.left = newNode;
+                        currentNode.left = newNode;
+                    }
+                    else
+                    {
+                        currentNode.right = newNode;
+                    }
+                    logEntry(newNode);
+                    logEntry("node added");
+                    // added the node and now to
+                    return true;
+
                 }
                 else
                 {
-                    currentNode.right = newNode;
+
+                    logEntry("node with number already exists");
+                    // this node already exists so 
+                    return false;
+
                 }
-                logEntry(newNode);
-                logEntry("node added");
-                // added the node and now to
-                return true;
-                
             }
             else
             {
-
-                logEntry("node with number already exists");
-                // this node already exists so 
-                return false;
-                
+                // create the node
+                TreeNode newNode = new TreeNode(currentNode, newNumber, newData);
+                // set node as trunk and return
+                trunk = newNode;
+                return true;
             }
         }
 
@@ -264,7 +292,15 @@ namespace BinaryTree
         // and now a function to kick it off
         public dblLinked fromLowest()
         {
-            return leftSideItr(trunk, false, new dblLinked());
+            // check that the trunk exists before doing anything
+            if (trunk != null)
+            {
+                return leftSideItr(trunk, false, new dblLinked());
+            }
+            else
+            {
+                return null;
+            }
         }
         // ##########################################################
         // right side iteration or list from Highest to lowest
@@ -338,49 +374,64 @@ namespace BinaryTree
         // and now a function to kick it off
         public dblLinked fromHighest()
         {
-            
-            return rightSideItr(trunk, false,new dblLinked());
+            // check that the trunk exists before doing anything
+            if (trunk != null)
+            {
+                return rightSideItr(trunk, false, new dblLinked());
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // ###################################### Straight Iteration
         // this is a left first straight iteration otherwise known as a level order traversal
         public dblLinked straightItr()
         {
-            dblLinked straightList = new dblLinked(trunk);
-            // if I dont add a least one more node to the list
-            // the loop will end at the start
-            /*
-            if(trunk.left!= null)
+            // check that the trunk exists before doing anything
+            if (trunk != null)
             {
-                straightList.addToEnd(trunk.left);
-            }
-            if (trunk.right != null)
-            {
-                straightList.addToEnd(trunk.right);
-            }
-            /*  it looks like a do while works instead of a while loop*/
-            do
-            {
-                // ok so to make the line of code readablely short lets pull the current
-                // node from the list with a name
-                TreeNode tempTreeNode = (TreeNode)straightList.getData();
-                // if it has a left node add it to list
-                if (tempTreeNode.left != null)
+                dblLinked straightList = new dblLinked(trunk);
+                // if I dont add a least one more node to the list
+                // the loop will end at the start
+                /*
+                if(trunk.left!= null)
                 {
-                    straightList.addToEnd(tempTreeNode.left);
+                    straightList.addToEnd(trunk.left);
                 }
-                // ditto for right
-                if (tempTreeNode.right != null)
+                if (trunk.right != null)
                 {
-                    straightList.addToEnd(tempTreeNode.right);
+                    straightList.addToEnd(trunk.right);
                 }
-                // go to the next node in the list
-                //straightList.goRight();
-            } while (straightList.goRight());
-            // well thats it for the loop
-            // it should should get though them all as it will stopp adding more 
-            // at the leaf nodes
-            return straightList;
+                /*  it looks like a do while works instead of a while loop*/
+                do
+                {
+                    // ok so to make the line of code readablely short lets pull the current
+                    // node from the list with a name
+                    TreeNode tempTreeNode = (TreeNode)straightList.getData();
+                    // if it has a left node add it to list
+                    if (tempTreeNode.left != null)
+                    {
+                        straightList.addToEnd(tempTreeNode.left);
+                    }
+                    // ditto for right
+                    if (tempTreeNode.right != null)
+                    {
+                        straightList.addToEnd(tempTreeNode.right);
+                    }
+                    // go to the next node in the list
+                    //straightList.goRight();
+                } while (straightList.goRight());
+                // well thats it for the loop
+                // it should should get though them all as it will stopp adding more 
+                // at the leaf nodes
+                return straightList;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // left side iteration or list from lowest to highest recording any time we dont go up the tree otherwise known as pre order traversal
@@ -460,7 +511,15 @@ namespace BinaryTree
         // and now a function to kick it off
         public dblLinked preOrder()
         {
-            return preOrderItr(trunk, false, new dblLinked());
+            // check that the trunk exists before doing anything
+            if (trunk != null)
+            {
+                return preOrderItr(trunk, false, new dblLinked());
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // this function measures whether the left side of one node is longer than the right
@@ -525,7 +584,6 @@ namespace BinaryTree
                     // well we dont have a left child so I'll just add the right node to the parent
                     // even if its null
                     // fiirst a parent check (aka trunk node)
-
                     if (toDelete.parent != null)
                     {
                         // also make sure that the deleting node has a right child - if it does not then there is no need to change any child references(we have already checked for left)
@@ -576,8 +634,9 @@ namespace BinaryTree
                         }
                         else
                         {
-                            // this is a lonley trunk node now
+                            // this is a lonley trunk node now to 
                             trunk = null;
+                            currentNode = null;
                         }
 
                     }
@@ -603,10 +662,18 @@ namespace BinaryTree
 
         public bool ChangeData(string data, int node)
         {
-            if (this.lookFor(trunk, node))
+            // check that the trunk exists before doing anything
+            if (trunk != null)
             {
-                currentNode.data = data;
-                return true;
+                if (this.lookFor(trunk, node))
+                {
+                    currentNode.data = data;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
@@ -681,7 +748,15 @@ namespace BinaryTree
         // and now a function to kick it off
         public dblLinked IndexFromLowest()
         {
-            return indexLeftSideItr(trunk, false, new dblLinked());
+            // check that the trunk exists before doing anything
+            if (trunk != null)
+            {
+                return indexLeftSideItr(trunk, false, new dblLinked());
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }

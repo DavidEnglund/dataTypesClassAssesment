@@ -29,7 +29,7 @@ namespace BinaryTree
 
             // lests setup some random nodes
             Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 1; i++)
             {
                 int rnum = rnd.Next(1, 1001);
                 myTree.addNode(rnum, "random node");
@@ -111,7 +111,9 @@ namespace BinaryTree
           //  myTree.clearLog();
            // lblLog.Text = myTree.fromLowest();
             // creating the straight iteration list
+           
             nodeList = myTree.fromLowest();
+            if (nodeList == null) { nodeList = new dblLinked(); }// this should fix the app crashing when it gets a null list. and yeah the code is not well formatted but who cares
             // go to the start of the list
             nodeList.goToStart();
             //display that list item in the label
@@ -122,8 +124,10 @@ namespace BinaryTree
         // straight ineration button
         public void btnStraight_click(object sender, EventArgs e)
         {
+            
             // creating the straight iteration list
             nodeList = myTree.straightItr();
+            if (nodeList == null) { nodeList = new dblLinked(); }// this should fix the app crashing when it gets a null list. and yeah the code is not well formatted but who cares
             // go to the start of the list
             nodeList.goToStart();
             //display that list item in the label
@@ -139,6 +143,7 @@ namespace BinaryTree
             //lblLog.Text = myTree.fromHighest().ToString();
             // creating the straight iteration list
             nodeList = myTree.preOrder();
+            if (nodeList == null) { nodeList = new dblLinked(); }// this should fix the app crashing when it gets a null list. and yeah the code is not well formatted but who cares
             nodeList.goToStart();
             lblLink.Text = nodeList.getData().ToString();
             //change the label above the link list display to say right side iteration
