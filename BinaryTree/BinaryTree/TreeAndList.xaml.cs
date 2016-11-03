@@ -24,8 +24,10 @@ namespace BinaryTree
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            btnAdd.Scale = 0.5;
+            btnAdd.FontSize = btnAdd.FontSize*2;
+            btnAdd.BackgroundColor = Color.Aqua;
             
-
             // lests setup some random nodes
             Random rnd = new Random();
             for (int i = 0; i < 20; i++)

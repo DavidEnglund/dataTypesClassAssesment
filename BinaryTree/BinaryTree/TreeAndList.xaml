@@ -21,14 +21,14 @@
       <StackLayout Orientation="Vertical" WidthRequest="60">
         <Label x:Name="lblKey"  Text="Key"/>
         <Entry x:Name="txtKey"  Text="0" Keyboard="Numeric" HorizontalOptions="FillAndExpand" />
-      </StackLayout>
+      </StackLayout >
       <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
         <Label x:Name="lblData" Text="Data"/>
         <Entry x:Name="txtData" Text="" HorizontalOptions="FillAndExpand" />
         </StackLayout>
       </StackLayout>
     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="1">
-      <Button x:Name="btnFind" Text="Find Key" Clicked="findKey_click" HorizontalOptions="StartAndExpand"/>
+      <Button x:Name="btnFind" Text="Find Key" Clicked="findKey_click" HorizontalOptions="StartAndExpand" BackgroundColor="Silver" />
       <Button x:Name="btnAdd" Text="Add Key" Clicked="addKey_click" HorizontalOptions="CenterAndExpand" />
       <Button x:Name="btnDelete" Text="Delete Key" Clicked="btnDelete_click" HorizontalOptions="CenterAndExpand" />
       <Button x:Name="btnSave" Text="Save Key" Clicked="btnSave_click" HorizontalOptions="EndAndExpand"  />
