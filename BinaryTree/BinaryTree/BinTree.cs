@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -524,32 +525,61 @@ namespace BinaryTree
                     // well we dont have a left child so I'll just add the right node to the parent
                     // even if its null
                     // fiirst a parent check (aka trunk node)
+
                     if (toDelete.parent != null)
                     {
-
-
-                        if (toDelete == toDelete.parent.left)
+                        // also make sure that the deleting node has a right child - if it does not then there is no need to change any child references(we have already checked for left)
+                        if (toDelete.right != null)
                         {
-                            toDelete.parent.left = toDelete.right;
-                            // and I need to set the left leaf's parent to its new host
-                            toDelete.right.parent = toDelete.parent;
+                            // is the node to be deleted the left or right of its parent?
+                            if (toDelete == toDelete.parent.left)
+                            {
+                                // if the right node exists, if it does not then this is a leaf and has no need to change any children
+
+                                toDelete.parent.left = toDelete.right;
+                                // and I need to set the left leaf's parent to its new host
+                                Debug.WriteLine(toDelete.parent);
+                                Debug.WriteLine(toDelete.left);
+                                Debug.WriteLine(toDelete.right);
+
+                                toDelete.right.parent = toDelete.parent;
+
+                            }
+                            else
+                            {
+                                toDelete.parent.right = toDelete.right;
+                                // and I need to set the right leaf's parent to its new host
+                                toDelete.right.parent = toDelete.parent;
+                            }
                         }
                         else
                         {
-                            toDelete.parent.right = toDelete.right;
-                            // and I need to set the right leaf's parent to its new host
-                            // if it has a right side, if not then its a leaf with no children
-                            if (toDelete.right != null)
+                            // there is no left or no right child so we just need to remove the nodes reference from its parent
+                            if (toDelete == toDelete.parent.left)
                             {
-                                toDelete.right.parent = toDelete.parent;
+                                toDelete.parent.left = null;
+                            }
+                            else
+                            {
+                                toDelete.parent.right = null;
                             }
                         }
                     }
                     else
                     {
                         // ok so we have no left node and we are deleting the trunk node
-                        trunk = toDelete.right;
-                        trunk.parent = null;
+                        // check for the right node again to see if the trunk is alone or not
+                        if (toDelete.right != null)
+                        {
+                            trunk = toDelete.right;
+                            trunk.parent = null;
+                        }
+                        else
+                        {
+                            // this is a lonley trunk node now
+                            trunk = null;
+                        }
+
                     }
                 }
                

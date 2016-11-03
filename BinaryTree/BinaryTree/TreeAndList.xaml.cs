@@ -29,7 +29,7 @@ namespace BinaryTree
 
             // lests setup some random nodes
             Random rnd = new Random();
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 5; i++)
             {
                 int rnum = rnd.Next(1, 1001);
                 myTree.addNode(rnum, "random node");
