@@ -365,20 +365,22 @@ namespace BinaryTree
                 return null;
             }
         }
-    }
-    // so I am going to have a controller class and a node class after all
-    //altough I could have had some fun messing if "tailed" or fractal lists without a controller
-    // to clean things up
-    class linkNode
-    {
-        public linkNode leftNode;
-        public  Object data;
-        public linkNode rightNode;
-        public linkNode(linkNode LeftNode, Object Data, linkNode RightNode)
+
+        // so I am going to have a controller class and a node class after all
+        //altough I could have had some fun messing if "tailed" or fractal lists without a controller
+        // to clean things up
+        private class linkNode
         {
-            leftNode = LeftNode;
-            data = Data;
-            rightNode = RightNode;
+            public linkNode leftNode;
+            public Object data;
+            public linkNode rightNode;
+            public linkNode(linkNode LeftNode, Object Data, linkNode RightNode)
+            {
+                leftNode = LeftNode;
+                data = Data;
+                rightNode = RightNode;
+            }
         }
     }
+   
 }
